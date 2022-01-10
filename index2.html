@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<title>Detalhes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.mySlides {display: none}
+</style>
+<body class="w3-content w3-border-left w3-border-right">
+  
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-light-grey w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-transparent w3-display-topright"></i>
+    <h3>Casio - Imóveis</h3>
+    <h6>Filtro:</h6>
+  
+    <hr>
+    <form action="/action_page.php" target="_blank">
+             
+      <p><label><i class="fa fa-child"></i>Cidade</label></p>
+      <input class="w3-input w3-border" placeholder="São Leopoldo" type="search" name="" id="">
+          
+      <p><label><i class="fa fa-male"></i>Quarto:</label></p>
+      <input class="w3-input w3-border" type="number" value="" name="Adults" min="1" max="6">         
+
+      <p><label><i class="fa fa-child"></i> Banheiro:</label></p>
+      <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
+
+      <div>
+        <br>
+        <input type="checkbox" name="" id=""> <span>Apartamento</span>
+      <input type="checkbox" name="" id=""> <span>Casa</span>
+      <br>
+      </div>
+      
+
+
+      <p><button class="w3-button w3-block w3-green w3-left-align" type="submit"><i class="fa fa-search w3-margin-right"></i>Buscar</button></p>
+    </form>
+  </div>
+  <div class="w3-bar-block">
+    <a href="https://api.whatsapp.com/send?phone=555189407361" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-building"></i> Contato </a>
+    <a  class="w3-bar-item w3-button w3-padding-16" href="index.htm">inicio</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-envelope"></i> Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <span class="w3-bar-item"><a style="text-decoration: none;" href="index.htm" >inicio</a></span>
+  <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button" onclick="w3_open()"><i><img src="menu_bars (2).png" alt=""></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-white" style="margin-left:260px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:80px"></div>
+
+  <!-- Slideshow Header -->
+  <div class="w3-container" id="apartment">
+    <h2 class="w3-text-green">Imóveis</h2>
+    <div class="w3-display-container mySlides">
+    <img src="i6R7zi0_12637619af315b4069.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Sala</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="iUX7p44T_1235660da1c8de3b72.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Cozinha</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="i7637O064_5076138bf5d3719e.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Sala</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="i26r693P27sh5_12128604126d2bc4b5.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Sala II</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="i6R7zi0_12637619af315b4069.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Living room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="/iUX7p44T_1235660da1c8de3b72.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="i7637O064_5076138bf5d3719e.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="i26r693P27sh5_12128604126d2bc4b5.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
+    </div>
+  </div>
+
+  <div class="w3-container">
+    <h4><strong>Infraestrutura do Imóvel</strong></h4>
+    <div class="w3-row w3-large">
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-male"></i> <b>3</b> Dormitório(s) </p>
+        <p><i class="fa fa-fw fa-bath"></i> <b>119.25m2</b></p>
+        
+      </div>
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-clock-o"></i> - Arcondicionado</p>
+        <p><i class="fa fa-fw fa-clock-o"></i> - sacada</p>
+        <p><i class="fa fa-fw fa-clock-o"></i> - vista Panoramica</p>
+      </div>
+    </div>
+    <hr>
+    
+    <h4><strong>Infraestrutura do Condominio</strong></h4>
+    <div class="w3-row w3-large">
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-shower"></i> - frente</p>
+      </div>
+
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-cutlery"></i> - sul</p>
+       
+      </div>
+    </div>
+    <hr>
+    
+    <h4><strong>Informações Extras</strong></h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum in provident quaerat tenetur ipsum culpa a ut ea molestias fugiat, sed reiciendis saepe consequuntur veritatis quasi adipisci harum quidem voluptatibus.</p>
+    <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+    <hr>
+    
+    <p><button class="w3-button w3-green w3-third"><a style="text-decoration: none;" href="https://api.whatsapp.com/send?phone=555189407361">Agendar visita</a></button></p>
+  </div>
+  <hr>
+  
+  
+  <footer class="w3-container w3-padding-16" style="margin-top:32px">Powered by <a href="" title="" target="_blank" class="w3-hover-text-green">Maicon Soares</a></footer>
+
+<!-- End page content -->
+</div>
+
+<!-- Subscribe Modal -->
+<div id="subscribe" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom w3-padding-large">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-button w3-xlarge w3-right w3-transparent"></i>
+      <h2 class="w3-wide">SUBSCRIBE</h2>
+      <p>Join our mailing list to receive updates on available dates and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Script to open and close sidebar when on tablets and phones
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Slideshow Apartment Images
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+
+</body>
+</html>
